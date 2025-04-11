@@ -11,6 +11,7 @@ export class TaskListComponent {
 
   constructor() {
     console.log('TaskListComponent initialized');
+
   }
 
   addTask(task: string) {
@@ -19,6 +20,7 @@ export class TaskListComponent {
 
   updateTask(task: string) {
     console.log('Updating task:', task);
+    localStorage.setItem('data', JSON.stringify(this.updateTask))
   }
 
   deleteTask(task: string) {
